@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "Polymer content icons component",
   "scripts": {
-    "lint": "eslint *.html",
+    "lint": "npm run lint:js && npm run lint:wc",
+    "lint:js": "eslint *.html",
+    "lint:wc": "polymer lint *.html",
     "postinstall": "polymer install --variants",
     "start": "polymer serve -p 9998",
     "test": "polymer test",
