@@ -1,0 +1,35 @@
+import '@polymer/polymer/polymer-legacy.js';
+import { Polymer } from '@polymer/polymer/lib/legacy/polymer-fn.js';
+const $_documentContainer = document.createElement('template');
+
+$_documentContainer.innerHTML = `<dom-module id="d2l-scorm-icon">
+<template strip-whitespace="">
+<svg width$="[[ _getWidth(compact) ]]" height$="[[ _getHeight(compact) ]]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+	<path fill="#565a5c" d="M56.89,8H3.11A3.111,3.111,0,0,0,0,11.1a3.037,3.037,0,0,0,1,2.26V39.81A4.215,4.215,0,0,0,5.22,44H54.78A4.215,4.215,0,0,0,59,39.81V13.36a3.037,3.037,0,0,0,1-2.26A3.111,3.111,0,0,0,56.89,8ZM3,10H57a.935.935,0,0,1,1,1,.94.94,0,0,1-1,1H3a.94.94,0,0,1-1-1A.935.935,0,0,1,3,10ZM57,39.81A2.215,2.215,0,0,1,54.78,42H5.22A2.215,2.215,0,0,1,3,39.81V14H57Z"></path>
+	<path fill="#565a5c" d="M21,18a1,1,0,0,1,1,1v9a1,1,0,0,1-1,1H7a1,1,0,0,1-1-1V19a1,1,0,0,1,1-1H21m0-1H7a2,2,0,0,0-2,2v9a2,2,0,0,0,2,2H21a2,2,0,0,0,2-2V19a2,2,0,0,0-2-2Z"></path>
+	<path fill="#565a5c" d="M18.5,21H8.5a.5.5,0,0,1,0-1h10a.5.5,0,0,1,0,1Z"></path>
+	<path fill="#565a5c" d="M15.807,24h-7a.5.5,0,0,1,0-1h7a.5.5,0,0,1,0,1Z"></path>
+	<path fill="#565a5c" d="M11.807,27h-3a.5.5,0,0,1,0-1h3a.5.5,0,1,1,0,1Z"></path>
+</svg>
+</template>
+	
+</dom-module>`;
+
+document.head.appendChild($_documentContainer.content);
+Polymer({
+	is: 'd2l-scorm-icon',
+	properties: {
+		compact: {
+			type: Boolean,
+			value: false
+		}
+	},
+
+	_getWidth: function(compact) {
+		return compact ? 49 : 256;
+	},
+
+	_getHeight: function(compact) {
+		return compact ? 65 : 201;
+	}
+});
