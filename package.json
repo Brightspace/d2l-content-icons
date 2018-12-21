@@ -9,8 +9,8 @@
   "version": "0.0.1",
   "scripts": {
     "lint": "npm run lint:wc && npm run lint:js",
-    "lint:js": "eslint . --ext .js,.html test/**/*.js test/**/*.html demo/**/*.js demo/**/*.html",
-    "lint:wc": "polymer lint",
+    "lint:js": "eslint . --ext .js,.html test/**/*.html demo/**/*.html",
+    "lint:wc": "polymer lint *.js",
     "start": "polymer serve -p 9998",
     "test": "polymer test",
     "posttest": "npm run lint"
@@ -20,10 +20,9 @@
   "devDependencies": {
     "@webcomponents/webcomponentsjs": "^2.2.1",
     "babel-eslint": "^10.0.1",
-    "bower-art-resolver": "2.0.6",
-    "eslint": "^3.7.1",
-    "eslint-config-brightspace": "^0.2.4",
-    "eslint-plugin-html": "^1.5.3",
+    "eslint": "^5.10.0",
+    "eslint-config-brightspace": "^0.4.1",
+    "eslint-plugin-html": "^5.0.0",
     "polymer-cli": "^1.9.3",
     "wct-browser-legacy": "^1.0.1"
   },
