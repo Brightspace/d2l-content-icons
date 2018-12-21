@@ -1,8 +1,10 @@
-<link rel="import" href="../polymer/polymer.html">
+import '@polymer/polymer/polymer-legacy.js';
+import { Polymer } from '@polymer/polymer/lib/legacy/polymer-fn.js';
+const $_documentContainer = document.createElement('template');
 
-<dom-module id="d2l-sound-bar-icon">
-	<template strip-whitespace>
-		<svg width$="[[ _getWidth(compact) ]]" height$="[[ _getHeight(compact) ]]" viewBox$="[[ _getViewBox(compact) ]]" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+$_documentContainer.innerHTML = `<dom-module id="d2l-sound-bar-icon">
+	<template strip-whitespace="">
+		<svg width$="[[ _getWidth(compact) ]]" height$="[[ _getHeight(compact) ]]" viewbox$="[[ _getViewBox(compact) ]]" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 			<defs></defs>
 			<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 				<g id="Folio-StudentPortfolio-ClassLevel-TeacherView" transform="translate(-430.000000, -1123.000000)" fill="#00BDDD">
@@ -17,27 +19,28 @@
 			</g>
 		</svg>
 	</template>
-	<script>
-		Polymer({
-			is: 'd2l-sound-bar-icon',
-			properties: {
-				compact: {
-					type: Boolean,
-					value: false
-				}
-			},
+	
+</dom-module>`;
 
-			_getWidth: function(compact) {
-				return compact ? 370 : 370;
-			},
+document.head.appendChild($_documentContainer.content);
+Polymer({
+	is: 'd2l-sound-bar-icon',
+	properties: {
+		compact: {
+			type: Boolean,
+			value: false
+		}
+	},
 
-			_getHeight: function(compact) {
-				return compact ? 50 : 134;
-			},
+	_getWidth: function(compact) {
+		return compact ? 370 : 370;
+	},
 
-			_getViewBox: function(compact) {
-				return [0, 0, this._getWidth(compact), this._getHeight(compact)].join(' ');
-			}
-		});
-	</script>
-</dom-module>
+	_getHeight: function(compact) {
+		return compact ? 50 : 134;
+	},
+
+	_getViewBox: function(compact) {
+		return [0, 0, this._getWidth(compact), this._getHeight(compact)].join(' ');
+	}
+});
