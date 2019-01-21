@@ -6,8 +6,8 @@
 
 		<title>d2l-content-icons test</title>
 
-		<script src="../../../@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
-		<script src="../../../wct-browser-legacy/browser.js"></script>
+		<script src="../../@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+		<script src="../../wct-browser-legacy/browser.js"></script>
 
 		<script type="module" src="../d2l-content-icons.js"></script>
 	</head>
@@ -19,13 +19,13 @@
 		</test-fixture>
 
 		<script type="module">
-import '../d2l-content-icons.js';
-suite('d2l-content-icons', function() {
-	test('instantiating the element works', function() {
-		var element = fixture('sound-bar');
-		assert.equal(element.is, 'd2l-content-icons');
-	});
-});
-</script>
+		import '../d2l-content-icons.js';
+		suite('d2l-content-icons', function() {
+			test('instantiating the element works', function() {
+				var element = fixture('sound-bar');
+				assert.equal(element.is, 'd2l-content-icons');
+			});
+		});
+		</script>
 	</body>
 </html>
